@@ -206,6 +206,7 @@ async def combined_goals_endpoint(request: CombinedGoalsRequest):
     return {
         "required_monthly_savings": required_monthly_savings,
         "required_monthly_investment": required_monthly_investment,
+        "current_allocation": request.allocation,  # ← ADD THIS LINE
         "savings_gap": savings_gap,
         "investment_gap": investment_gap,
         "total_shortfall": total_shortfall,
